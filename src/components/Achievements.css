@@ -1,0 +1,226 @@
+.achievements-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #b08cff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.certifications-section,
+.accomplishments-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certification-card {
+  background: rgba(140, 0, 176, 0.1);
+  border: 1px solid rgba(140, 0, 176, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  background: rgba(140, 0, 176, 0.2);
+  border-color: rgba(140, 0, 176, 0.4);
+  box-shadow: 0 12px 32px rgba(140, 0, 176, 0.3);
+}
+
+.certification-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #8c00b0, #b08cff);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certification-icon i {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.certification-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.certification-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b08cff;
+  margin: 0;
+}
+
+.certification-issuer {
+  font-size: 0.9rem;
+  color: #8c00b0;
+  font-weight: 500;
+  margin: 0;
+}
+
+.certification-year {
+  font-size: 0.8rem;
+  color: #ffffff;
+  opacity: 0.7;
+  background: rgba(140, 0, 176, 0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  align-self: flex-start;
+  margin: 0;
+}
+
+.certification-description {
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.accomplishments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.accomplishment-card {
+  background: rgba(176, 140, 255, 0.1);
+  border: 1px solid rgba(176, 140, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.accomplishment-card:hover {
+  transform: translateY(-5px);
+  background: rgba(176, 140, 255, 0.2);
+  border-color: rgba(176, 140, 255, 0.4);
+  box-shadow: 0 12px 32px rgba(176, 140, 255, 0.3);
+}
+
+.accomplishment-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #b08cff, #8c00b0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.accomplishment-icon i {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.accomplishment-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b08cff;
+  margin: 0 0 0.8rem 0;
+}
+
+.accomplishment-description {
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Tablet responsive */
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .accomplishments-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .certification-card {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .accomplishment-card {
+    padding: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .accomplishments-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .certification-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .accomplishment-card {
+    padding: 1rem;
+  }
+  
+  .certification-icon,
+  .accomplishment-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .certification-icon i,
+  .accomplishment-icon i {
+    font-size: 1.2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .certification-title,
+  .accomplishment-title {
+    font-size: 1rem;
+  }
+  
+  .certification-description,
+  .accomplishment-description {
+    font-size: 0.8rem;
+  }
+} 
