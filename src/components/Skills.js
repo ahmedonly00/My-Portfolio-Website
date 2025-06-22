@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import './Skills.css';
-import { isCursorAtEnd } from '@testing-library/user-event/dist/utils';
+
 
 const Skills = () => {
   const technicalSkills = [
@@ -45,7 +45,7 @@ const Skills = () => {
     ],
     'Coding & Programming Expertise': [
       { name: 'GitHub Copilot', icon: 'fas fa-code-branch' },
-      
+
 
     ],
     'Design Software': [
