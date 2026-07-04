@@ -6,7 +6,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'experience', 'achievements', 'projects', 'contact'];
+      const sections = ['home', 'about', 'projects', 'skills', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -40,68 +40,28 @@ const Navigation = () => {
         <div className="nav-brand">
           <span className="brand-name">Ahmed</span>
         </div>
-        
+
         <ul className="nav-links">
-          <li>
-            <button 
-              className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
-              onClick={() => scrollToSection('home')}
-            >
-              Home
-            </button>
-          </li>
-          <li>
-            <button 
-              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-              onClick={() => scrollToSection('about')}
-            >
-              About
-            </button>
-          </li>
-          <li>
-            <button 
-              className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
-              onClick={() => scrollToSection('skills')}
-            >
-              Skills
-            </button>
-          </li>
-          <li>
-            <button 
-              className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}
-              onClick={() => scrollToSection('experience')}
-            >
-              Experience
-            </button>
-          </li>
-          <li>
-            <button 
-              className={`nav-link ${activeSection === 'achievements' ? 'active' : ''}`}
-              onClick={() => scrollToSection('achievements')}
-            >
-              Achievements
-            </button>
-          </li>
-          <li>
-            <button 
-              className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
-              onClick={() => scrollToSection('projects')}
-            >
-              Projects
-            </button>
-          </li>
-          <li>
-            <button 
-              className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-              onClick={() => scrollToSection('contact')}
-            >
-              Contact
-            </button>
-          </li>
+          {[
+            { id: 'home', label: 'Home' },
+            { id: 'about', label: 'About' },
+            { id: 'projects', label: 'Projects' },
+            { id: 'skills', label: 'Skills' },
+            { id: 'contact', label: 'Contact' },
+          ].map(({ id, label }) => (
+            <li key={id}>
+              <button
+                className={`nav-link ${activeSection === id ? 'active' : ''}`}
+                onClick={() => scrollToSection(id)}
+              >
+                {label}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
   );
 };
 
-export default Navigation; 
+export default Navigation;

@@ -9,60 +9,29 @@ const Contact = () => {
       type: 'Email',
       value: 'ahmedndayizeye@gmail.com',
       icon: 'fas fa-envelope',
-      link: 'mailto:ahmedndayizeye@gmail.com'
+      link: 'mailto:ahmedndayizeye@gmail.com',
     },
     {
       id: 2,
-      type: 'Phone',
-      value: '+250782242930',
-      icon: 'fas fa-phone',
-      link: 'tel:+250782242930'
+      type: 'GitHub',
+      value: 'github.com/ahmedonly00',
+      icon: 'fab fa-github',
+      link: 'https://github.com/ahmedonly00',
     },
     {
       id: 3,
       type: 'LinkedIn',
       value: 'linkedin.com/in/ahmed-ndayizeye',
       icon: 'fab fa-linkedin',
-      link: 'https://www.linkedin.com/in/ahmed-ndayizeye'
-    },
-    {
-      id: 4,
-      type: 'GitHub',
-      value: 'github.com/ahmedndayizeye',
-      icon: 'fab fa-github',
-      link: 'https://github.com/ahmedonly00'
-    }
-  ];
-
-  const socialLinks = [
-    {
-      id: 1,
-      name: 'LinkedIn',
-      icon: 'fab fa-linkedin',
       link: 'https://www.linkedin.com/in/ahmed-ndayizeye',
-      color: '#0077b5'
-    },
-    {
-      id: 2,
-      name: 'GitHub',
-      icon: 'fab fa-github',
-      link: 'https://github.com/ahmedonly00',
-      color: '#333'
-    },
-    {
-      id: 3,
-      name: 'Twitter',
-      icon: 'fab fa-twitter',
-      link: 'https://twitter.com/ahmedndayizeye',
-      color: '#1da1f2'
     },
     {
       id: 4,
-      name: 'Instagram',
-      icon: 'fab fa-instagram',
-      link: 'https://instagram.com/ahmedndayizeye',
-      color: '#e4405f'
-    }
+      type: 'Phone',
+      value: '+250 782 242 930',
+      icon: 'fas fa-phone',
+      link: 'tel:+250782242930',
+    },
   ];
 
   return (
@@ -71,15 +40,15 @@ const Contact = () => {
         <div className="contact-info-section">
           <h3 className="contact-subtitle">Get In Touch</h3>
           <p className="contact-description">
-            I'm always interested in new opportunities and exciting projects. 
-            Feel free to reach out if you'd like to collaborate or just want to say hello!
+            Whether you're building a product, hiring an engineer, or have a collaboration in mind —
+            I'm always open to a conversation. Reach out through any of the channels below.
           </p>
-          
+
           <div className="contact-info-grid">
             {contactInfo.map((info) => (
-              <a 
-                key={info.id} 
-                href={info.link} 
+              <a
+                key={info.id}
+                href={info.link}
                 className="contact-info-card"
                 target={info.link.startsWith('http') ? '_blank' : '_self'}
                 rel={info.link.startsWith('http') ? 'noopener noreferrer' : ''}
@@ -95,28 +64,9 @@ const Contact = () => {
             ))}
           </div>
         </div>
-
-        <div className="social-section">
-          <h3 className="contact-subtitle">Follow Me</h3>
-          <div className="social-links">
-            {socialLinks.map((social) => (
-              <a
-                key={social.id}
-                href={social.link}
-                className="social-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ '--social-color': social.color }}
-              >
-                <i className={social.icon}></i>
-                <span className="social-name">{social.name}</span>
-              </a>
-            ))}
-          </div>
-        </div>
       </div>
     </Section>
   );
 };
 
-export default Contact; 
+export default Contact;

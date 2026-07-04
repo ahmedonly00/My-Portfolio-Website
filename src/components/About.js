@@ -8,57 +8,53 @@ const About = () => {
       <div className="about-content">
         <div className="about-text">
           <p className="about-description">
-            I am a passionate Software Engineer with hands-on experience in full-stack development, 
-            scalable software applications, and Agile methodologies. With over 2 years of experience 
-            in the technology industry, I have developed a strong foundation in both frontend and 
-            backend technologies.
+            I'm based in Rwanda and have been building software professionally since 2022 — starting
+            with internships in community and government-adjacent systems, then moving into production
+            platform engineering. My background spans .NET, Java, and JavaScript ecosystems across
+            web, mobile, and USSD channels.
           </p>
-          
           <p className="about-description">
-            My expertise spans across multiple programming languages and frameworks, including Java 
-            , JavaScript, C#, and .NET. I specialize in building robust web applications using 
-            modern technologies like React, Node.js, Spring Boot, and ASP.NET, while also having experience 
-            in Linux and Windows.
+            Most of my recent work lives at the intersection of backend reliability and African
+            payment infrastructure. I've debugged production OOM crashes, fixed race conditions
+            between services, and built audit systems that financial operators can actually trust.
           </p>
-          
           <p className="about-description">
-            I thrive in solving real-world challenges using technology and creating innovative 
-            solutions that make a difference. My approach combines technical excellence with 
-            strong problem-solving skills, ensuring that every project I work on delivers 
-            exceptional user experiences and meets business objectives.
+            Outside work I contribute to community-focused tools — the mosque management and
+            savings group systems in my portfolio came from real requests by local organizations
+            in Rwanda.
           </p>
         </div>
-        
+
         <div className="about-highlights">
           <div className="highlight-item">
-            <i className="fas fa-code highlight-icon"></i>
+            <i className="fas fa-server highlight-icon"></i>
             <div className="highlight-content">
-              <h4>Full-Stack Development</h4>
-              <p>Experienced in both frontend and backend development with modern frameworks and technologies.</p>
+              <h4>Production Backend Systems</h4>
+              <p>Spring Boot APIs with JWT-RBAC, audit logging across 12 services, and JPA/Redis tuned for production load.</p>
             </div>
           </div>
-          
+
           <div className="highlight-item">
-            <i className="fas fa-users highlight-icon"></i>
+            <i className="fas fa-mobile-alt highlight-icon"></i>
             <div className="highlight-content">
-              <h4>Team Collaboration</h4>
-              <p>Strong experience working in Agile teams with excellent communication and collaboration skills.</p>
+              <h4>Mobile Money Payments</h4>
+              <p>M-Pesa integration with real-time callback handling and automatic order confirmation — no bank card required.</p>
             </div>
           </div>
-          
+
           <div className="highlight-item">
-            <i className="fas fa-rocket highlight-icon"></i>
+            <i className="fas fa-broadcast-tower highlight-icon"></i>
             <div className="highlight-content">
-              <h4>Problem Solving</h4>
-              <p>Expert at analyzing complex problems and designing efficient, scalable solutions.</p>
+              <h4>Real-Time Features</h4>
+              <p>WebSocket-based live delivery tracking, GPS ETA calculation, and live order status broadcasting.</p>
             </div>
           </div>
-          
+
           <div className="highlight-item">
-            <i className="fas fa-graduation-cap highlight-icon"></i>
+            <i className="fas fa-shield-alt highlight-icon"></i>
             <div className="highlight-content">
-              <h4>Continuous Learning</h4>
-              <p>Committed to staying updated with the latest technologies and industry best practices.</p>
+              <h4>Reliability Engineering</h4>
+              <p>Diagnosed OOM crashes, fixed startup race conditions, resolved 16 LazyInitializationExceptions, and backfilled live database constraints.</p>
             </div>
           </div>
         </div>
@@ -67,4 +63,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;

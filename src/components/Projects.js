@@ -6,61 +6,36 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Bus Management System',
-      description: 'A comprehensive ticket reservation and seat booking system built with .NET framework. Features include real-time seat availability, online payment integration, and automated booking confirmations.',
-      technologies: ['C#', '.NET', 'ASP.NET', 'SQL Server', 'Entity Framework'],
-      backgroundColor: '#ff9966',
-      icon: 'fas fa-bus'
+      title: 'HEMS',
+      description: 'National health workforce management platform for Rwanda — tracking professionals from student enrollment through clinical training, internship placement, and Ministry of Health licensing. Used by hospitals, universities, the Ministry of Health, and the Rwanda Health Council.',
+      technologies: ['Spring Boot', 'Microservices', 'PostgreSQL', 'Next.js', 'REST APIs'],
+      icon: 'fas fa-hospital',
+      backgroundColor: '#0f4c75',
     },
     {
       id: 2,
-      title: 'E-Suggestion Box System',
-      description: 'An anonymous feedback platform developed with ASP.NET that allows users to submit suggestions and complaints securely. Includes admin dashboard for feedback management.',
-      technologies: ['ASP.NET', 'C#', 'JavaScript', 'Bootstrap', 'SQL Server'],
-      backgroundColor: '#a4de02',
-      icon: 'fas fa-comment-dots'
+      title: 'MozFood',
+      description: 'Production food delivery platform for the Mozambican market — connecting customers, restaurants, and riders in real time with M-Pesa mobile payments.',
+      technologies: ['Java 17', 'Spring Boot', 'MySQL', 'Redis', 'Next.js 14', 'Docker', 'M-Pesa API', 'WebSocket'],
+      icon: 'fas fa-utensils',
+      backgroundColor: '#8c00b0',
     },
     {
-      id: 3,
-      title: 'Pharmacy Management System',
-      description: 'Java-based medicine search and order placement system with inventory management, prescription tracking, and automated reorder notifications.',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'Hibernate', 'JSP'],
-      backgroundColor: '#8c00b0',
-      icon: 'fas fa-pills'
+      id: 2,
+      title: 'Ikimina USSD System',
+      description: 'USSD-based savings and loan platform serving community savings groups. Members request loans, track savings, and manage contributions directly from a basic phone.',
+      technologies: ['Java', 'Spring Boot', 'MySQL', 'PostgreSQL', 'USSD API'],
+      icon: 'fas fa-money-bill-wave',
+      backgroundColor: '#1a6b3c',
     },
     {
       id: 4,
-      title: 'Smart Home Monitoring App',
-      description: 'Real-time home automation application built with Flutter. Features include IoT device control, security monitoring, and energy consumption tracking.',
-      technologies: ['Flutter', 'Dart', 'Firebase', 'IoT', 'REST APIs'],
-      backgroundColor: '#00d4ff',
-      icon: 'fas fa-home'
-    },
-    {
-      id: 5,
-      title: 'Ikimina Ussd System',
-      description: 'Complete Ikimina Ussd System with Java Spring Boot for backend. Includes user authentication, Requestin Loan processing, and Saving (Ingoboka & Ubwizigame) management.',
-      technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'MySQL', 'Hibernate'],
-      backgroundColor: '#ff6b6b',
-      icon: 'fas fa-money-bill'
-    },
-    {
-      id: 6,
       title: 'Mosque Management System',
-      description: 'A comprehensive mosque management system that handles prayer schedules, event planning, donation tracking, and community member management. Features include automated adhan timings, Quranic class scheduling, and zakat calculations.',
-      technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'MySQL', 'Hibernate'],
-      backgroundColor: '#4ecdc4',
-      icon: 'fas fa-mosque'
+      description: 'Community management system handling prayer schedules, event planning, donation tracking, Quranic class scheduling, and member management.',
+      technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate'],
+      icon: 'fas fa-mosque',
+      backgroundColor: '#1a3a6b',
     },
-    {
-      id: 7,
-      title: 'Personal Finance Tracker',
-      description: 'A comprehensive personal finance tracker that handles income, expenses, and savings management. Features include automated adhan timings, Quranic class scheduling, and zakat calculations.',
-      technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'MySQL', 'Hibernate'],
-      backgroundColor: '#00d4ff',
-      icon: 'fas fa-money-bill'
-    }
-
   ];
 
   return (
@@ -68,29 +43,17 @@ const Projects = () => {
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
-            <div 
-              className="project-header"
-              style={{ backgroundColor: project.backgroundColor }}
-            >
+            <div className="project-header" style={{ backgroundColor: project.backgroundColor }}>
               <i className={`project-icon ${project.icon}`}></i>
               <h3 className="project-title">{project.title}</h3>
             </div>
-            
             <div className="project-content">
               <p className="project-description">{project.description}</p>
-              
               <div className="project-technologies">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="technology-tag">
-                    {tech}
-                  </span>
+                {project.technologies.map((tech, i) => (
+                  <span key={i} className="technology-tag">{tech}</span>
                 ))}
               </div>
-              
-              <button className="view-project-btn">
-                <i className="fas fa-eye"></i>
-                View Project
-              </button>
             </div>
           </div>
         ))}
@@ -99,4 +62,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;

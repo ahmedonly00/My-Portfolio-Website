@@ -2,94 +2,76 @@ import React from 'react';
 import Section from './Section';
 import './Skills.css';
 
-
 const Skills = () => {
-  const technicalSkills = [
-    { name: 'Java', icon: 'fab fa-java' },
-    { name: 'Node.js', icon: 'fab fa-node-js' },
-    { name: 'JavaScript', icon: 'fab fa-js-square' },
-    { name: 'C#', icon: 'fas fa-code' },
-    { name: 'Python', icon: 'fab fa-python' },
-    { name: 'Spring Boot', icon: 'fas fa-leaf' },
-    { name: 'ASP.NET', icon: 'fab fa-microsoft' },
-    { name: 'Hibernate', icon: 'fas fa-database' },
-    { name: 'React', icon: 'fab fa-react' },
-    { name: 'Flutter', icon: 'fas fa-mobile-alt' },
-    { name: 'HTML', icon: 'fab fa-html5' },
-    { name: 'CSS', icon: 'fab fa-css3-alt' },
-    { name: 'Tailwind CSS', icon: 'fab fa-tailwind-css' },
-    { name: 'SQL', icon: 'fas fa-database' },
-    { name: 'MySQL', icon: 'fas fa-database' },
-    { name: 'PostgreSQL', icon: 'fas fa-database' },
-    { name: 'RESTful APIs', icon: 'fas fa-cloud' },
-    { name: 'Entity Framework', icon: 'fas fa-cogs' },
-    { name: 'Git', icon: 'fab fa-git-alt' },
-    { name: 'GitHub', icon: 'fab fa-github' },
-    { name: 'GitLab', icon: 'fab fa-gitlab' },
-    { name: 'Linux', icon: 'fab fa-linux' },
-    { name: 'Windows', icon: 'fab fa-windows' },
-    { name: 'Docker', icon: 'fab fa-docker' },
-    { name: 'Kubernetes', icon: 'fab fa-kubernetes' },
-    { name: 'AWS', icon: 'fab fa-aws' },
-    { name: 'Azure', icon: 'fab fa-azure' },
-    { name: 'Firebase', icon: 'fab fa-firebase' },
-    { name: 'MongoDB', icon: 'fas fa-database' },
-    { name: 'Redis', icon: 'fas fa-database' },
+  const groups = [
+    {
+      label: 'Backend',
+      icon: 'fas fa-server',
+      skills: [
+        { name: 'Java', icon: 'fab fa-java' },
+        { name: 'Spring Boot', icon: 'fas fa-leaf' },
+        { name: 'JPA / Hibernate', icon: 'fas fa-database' },
+        { name: 'MySQL', icon: 'fas fa-database' },
+        { name: 'Redis', icon: 'fas fa-bolt' },
+        { name: 'REST APIs', icon: 'fas fa-cloud' },
+      ],
+    },
+    {
+      label: 'Frontend',
+      icon: 'fas fa-desktop',
+      skills: [
+        { name: 'Next.js', icon: 'fas fa-code' },
+        { name: 'React', icon: 'fab fa-react' },
+        { name: 'TypeScript', icon: 'fas fa-code' },
+        { name: 'Tailwind CSS', icon: 'fas fa-palette' },
+        { name: 'shadcn/ui', icon: 'fas fa-layer-group' },
+        { name: 'JavaScript', icon: 'fab fa-js-square' },
+      ],
+    },
+    {
+      label: 'DevOps',
+      icon: 'fas fa-cogs',
+      skills: [
+        { name: 'Docker', icon: 'fab fa-docker' },
+        { name: 'GitHub Actions', icon: 'fab fa-github' },
+        { name: 'Linux', icon: 'fab fa-linux' },
+        { name: 'Git', icon: 'fab fa-git-alt' },
+      ],
+    },
+    {
+      label: 'Payments & Real-Time',
+      icon: 'fas fa-mobile-alt',
+      skills: [
+        { name: 'M-Pesa API', icon: 'fas fa-money-bill-wave' },
+        { name: 'Mobile Money', icon: 'fas fa-wallet' },
+        { name: 'WebSocket', icon: 'fas fa-broadcast-tower' },
+        { name: 'JWT / RBAC', icon: 'fas fa-shield-alt' },
+      ],
+    },
   ];
 
-  const aiToolsCategories = {
-    'Text Generation & Assistance': [
-      { name: 'ChatGPT', icon: 'fas fa-robot' },
-      { name: 'Claude', icon: 'fas fa-brain' },
-     
-    ],
-    'Coding & Programming Expertise': [
-      { name: 'GitHub Copilot', icon: 'fas fa-code-branch' },
-
-
-    ],
-    'Design Software': [
-      { name: 'Figma', icon: 'fab fa-figma' },
-      { name: 'draw.io', icon: 'fas fa-eye' }
-    ]
-  };
-
   return (
-    <Section id="skills" title="Skills & Technologies">
+    <Section id="skills" title="Skills">
       <div className="skills-content">
-        <div className="skills-section">
-          <h3 className="skills-category-title">My Skills</h3>
-          <div className="skills-grid">
-            {technicalSkills.map((skill, index) => (
-              <div key={index} className="skill-card">
-                <i className={`skill-icon ${skill.icon}`}></i>
-                <span className="skill-name">{skill.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="skills-section">
-          <h3 className="skills-category-title">Additional Skills (AI Tools Expertise)</h3>
-          <div className="ai-categories">
-            {Object.entries(aiToolsCategories).map(([category, skills]) => (
-              <div key={category} className="ai-category">
-                <h4 className="ai-category-title">{category}</h4>
-                <div className="skills-grid">
-                  {skills.map((skill, index) => (
-                    <div key={index} className="skill-card ai-skill">
-                      <i className={`skill-icon ${skill.icon}`}></i>
-                      <span className="skill-name">{skill.name}</span>
-                    </div>
-                  ))}
+        {groups.map((group) => (
+          <div key={group.label} className="skill-group">
+            <h3 className="skill-group-title">
+              <i className={group.icon}></i>
+              {group.label}
+            </h3>
+            <div className="skills-grid">
+              {group.skills.map((skill, index) => (
+                <div key={index} className="skill-card">
+                  <i className={`skill-icon ${skill.icon}`}></i>
+                  <span className="skill-name">{skill.name}</span>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </Section>
   );
 };
 
-export default Skills; 
+export default Skills;

@@ -3,10 +3,8 @@ import Background3D from './components/Background3D';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Achievements from './components/Achievements';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 import Contact from './components/Contact';
 
 function App() {
@@ -17,10 +15,8 @@ function App() {
       <main>
         <Home />
         <About />
-        <Skills />
-        <Experience />
-        <Achievements />
         <Projects />
+        <Skills />
         <Contact />
       </main>
       <footer style={{
@@ -39,4 +35,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
