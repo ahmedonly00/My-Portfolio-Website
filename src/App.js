@@ -21,11 +21,11 @@ function App() {
       </main>
       <footer style={{
         textAlign: 'center',
-        color: '#b08cff',
-        background: 'rgba(26,26,46,0.95)',
+        color: '#67e8f9',
+        background: 'rgba(15,23,42,0.95)',
         padding: '2rem 0 1rem 0',
         fontSize: '1rem',
-        borderTop: '1px solid rgba(140,0,176,0.2)',
+        borderTop: '1px solid rgba(6,182,212,0.2)',
         marginTop: '2rem',
         zIndex: 1000
       }}>

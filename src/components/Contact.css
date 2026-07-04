@@ -13,7 +13,7 @@
 .contact-subtitle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #b08cff;
+  color: #67e8f9;
   margin: 0;
   text-align: center;
 }
@@ -39,8 +39,8 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(140, 0, 176, 0.1);
-  border: 1px solid rgba(140, 0, 176, 0.2);
+  background: rgba(6, 182, 212, 0.06);
+  border: 1px solid rgba(6, 182, 212, 0.15);
   border-radius: 12px;
   padding: 1.2rem 1rem;
   text-decoration: none;
@@ -50,21 +50,21 @@
 
 .contact-info-card:hover {
   transform: translateY(-3px);
-  background: rgba(140, 0, 176, 0.2);
-  border-color: rgba(140, 0, 176, 0.4);
-  box-shadow: 0 8px 24px rgba(140, 0, 176, 0.2);
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.12);
 }
 
 .contact-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #8c00b0, #b08cff);
+  background: linear-gradient(135deg, #06b6d4, #67e8f9);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  color: #fff;
+  color: #0f172a;
   flex-shrink: 0;
 }
 
@@ -77,7 +77,7 @@
 .contact-type {
   font-size: 1rem;
   font-weight: 600;
-  color: #b08cff;
+  color: #67e8f9;
   margin: 0;
 }
 

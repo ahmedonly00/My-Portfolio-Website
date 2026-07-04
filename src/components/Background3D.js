@@ -40,7 +40,7 @@ const Background3D = () => {
     geometryRef.current = geometry;
 
     const material = new THREE.MeshBasicMaterial({
-      color: 0x8c00b0,
+      color: 0x06b6d4,
       wireframe: true,
       transparent: true,
       opacity: 0.3

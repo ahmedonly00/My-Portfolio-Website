@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(26, 26, 46, 0.95);
+  background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(140, 0, 176, 0.3);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.3);
   z-index: 1000;
   padding: 1rem 0;
 }
@@ -27,13 +27,13 @@
 .brand-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #8c00b0;
+  color: #06b6d4;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .brand-name:hover {
-  color: #b08cff;
+  color: #67e8f9;
 }
 
 .nav-links {
@@ -58,13 +58,13 @@
 }
 
 .nav-link:hover {
-  color: #b08cff;
-  background: rgba(140, 0, 176, 0.1);
+  color: #67e8f9;
+  background: rgba(6, 182, 212, 0.1);
 }
 
 .nav-link.active {
-  color: #b08cff;
-  background: rgba(140, 0, 176, 0.2);
+  color: #67e8f9;
+  background: rgba(6, 182, 212, 0.15);
 }
 
 .nav-link.active::after {
@@ -75,7 +75,7 @@
   transform: translateX(-50%);
   width: 20px;
   height: 2px;
-  background: #8c00b0;
+  background: #06b6d4;
   border-radius: 1px;
 }
 

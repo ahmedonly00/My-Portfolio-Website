@@ -29,22 +29,22 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1.5rem;
-  background: rgba(140, 0, 176, 0.1);
-  border: 1px solid rgba(140, 0, 176, 0.2);
+  background: rgba(6, 182, 212, 0.06);
+  border: 1px solid rgba(6, 182, 212, 0.15);
   border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .highlight-item:hover {
   transform: translateY(-3px);
-  background: rgba(140, 0, 176, 0.2);
-  border-color: rgba(140, 0, 176, 0.4);
-  box-shadow: 0 8px 24px rgba(140, 0, 176, 0.2);
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.12);
 }
 
 .highlight-icon {
   font-size: 1.5rem;
-  color: #8c00b0;
+  color: #06b6d4;
   margin-top: 0.2rem;
   flex-shrink: 0;
 }
@@ -52,7 +52,7 @@
 .highlight-content h4 {
   font-size: 1.05rem;
   font-weight: 600;
-  color: #b08cff;
+  color: #67e8f9;
   margin: 0 0 0.5rem 0;
 }
 

@@ -14,7 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1a2e;
+  background-color: #0f172a;
   color: #ffffff;
   overflow-x: hidden;
 }
@@ -30,14 +30,14 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a2e;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8c00b0;
+  background: #06b6d4;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b08cff;
+  background: #67e8f9;
 } 
